@@ -1,0 +1,34 @@
+*
+{
+	margin: 0;
+	padding: 0;	
+	box-sizing: border-box;
+	font-family: consolas;
+}
+body
+{
+	min-height: 100vh;
+	background: linear-gradient(145deg, #ff8900, #e97300);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.box
+{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	border-radius: 42px;
+	/*border-radius: 50%;*/
+	background: linear-gradient(145deg, #ff8900, #e97300);
+	box-shadow: 17px 17px 40px #cf6800,
+				-17px -17px 40px #ff9800;
+
+}
+.box:hover
+{
+	border-radius: 42px;
+	background: linear-gradient(145deg, #e67300, #ff8900);
+	box-shadow: 17px 17px 40px #cf6800,
+				-17px -17px 40px #ff9800;
+}

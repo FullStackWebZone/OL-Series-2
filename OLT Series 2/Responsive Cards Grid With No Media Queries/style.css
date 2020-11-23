@@ -1,0 +1,93 @@
+*
+{
+	margin: 0;
+	padding: 0;	
+	box-sizing: border-box;
+	font-family: consolas;
+}
+html
+{
+	font-size: 62.5%;
+}
+body
+{
+	min-height: 100vh;
+	background: #111;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container
+{
+	max-width: 98rem;
+	padding: 1.5rem;
+}
+.cards
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+	grid-gap: 1.5rem;
+}
+.card
+{
+	font-family: sans-serif;
+	background-color: #262525;
+	color: #fff;
+	padding: 1.5rem;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.card-title-large
+{
+	font-family: fantasy;
+	font-size: 10rem;
+	letter-spacing: .5rem;
+	transform: translateX(7rem);
+	color: #1d1e1e;
+	transition: transform 5s;
+}
+/*.fab
+{
+	font-size: 10px;
+}*/
+.card-title-small
+{
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+}
+.card-description
+{
+	font-size: 1.2rem;
+	line-height: 1.5;
+}
+.card-cta
+{
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	margin-top: 1rem;
+	align-self: flex-end;
+}
+.card:hover .card-title-large
+{
+	transform: translateX(150%);
+	color: #fff;
+}
+.card.twitter:hover
+{
+	background-color: #00acee;
+}
+.card.instagram:hover
+{
+	background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+	/*background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);*/
+}
+.card.facebook:hover
+{
+	background-color: #3b5998;
+}
+.card.youtube:hover
+{
+	background-color: #c4302b;
+}

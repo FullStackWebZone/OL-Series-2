@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+textarea {
+background-color: white;
+color: blue;
+width:350px;
+height:90px;
+border:1px solid blue;
+border-radius:10px;
+box-shadow:inset -2px -5px 9px 2px grey;
+font-family:consolas, "courier" ,serif;
+font-size:20px;
+}
+iframe {
+border:1px solid blue;
+width:355px;
+height:2000px;
+border-radius:10px;
+box-shadow:inset -5px -5px 9px 2px grey;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<textarea oninput="output()" id="t1" placeholder="  HTML .."></textarea><br>
+<textarea oninput="output()" id="t2" placeholder="  CSS .."></textarea><br>
+<textarea oninput="output()" id="t3" placeholder="  SCRIPT .."></textarea><br>
+<iframe id="output"></iframe>
+</div>
+<script>
+function output() {
+var t1=document.getElementById("t1").value;
+var t2="<style>"+document.getElementById("t2").value
++"</style>";
+var t3="<scri"+"pt>"+document.getElementById("t3").value
++"</scri"+"pt>";
+var output=document.getElementById("output").contentWindow.document;
+output.open();
+output.write(t1+t2+t3);
+output.close();
+}
+</script>
+</body>
+</html>

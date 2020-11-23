@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BORDER-RADIUS GENERATOR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+    height:100vh;
+    display:grid;
+    place-items: center;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    }
+    .main {
+    height:600px;
+    display:grid;
+    place-items: center;
+    background-color: #fff;
+    width:300px;
+    border-radius:10px;
+    box-shadow:3px 3px 10px #333 inset,
+    -3px -3px 10px #333 inset;
+    padding-bottom:20px;
+    }
+    .main #code {
+    border:1px solid #000;
+    height:30px;
+    width:250px;
+    background-color:rgba(0, 0, 0, 0.5);
+    outline: none;
+    border-radius:50px;
+    text-align: center;
+    box-shadow:1px 1px 10px #333 inset,
+    -1px -1px 10px #333 inset;
+    font-family:consolas,"courier", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    color:#fff;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.17);
+    }
+    input[type="range"] {
+    -webkit-appearance:none;
+    height:25px;
+    width:80%;
+    background-color:#ff3300;
+    border-radius:50px;
+    outline:none;
+    box-shadow:1px 1px 10px #333 inset,
+    -1px -1px 10px #333 inset;
+    border:1px solid #000;
+    }
+    input[type="range"]::-webkit-slider-thumb{
+    height:30px;
+    width:30px;
+    background-color:#ff3300;
+    border-radius:50%;
+    outline:none;
+    -webkit-appearance:none;
+    border:1px solid #000;
+    background:#fff;
+    box-shadow:2px 2px 10px #333 inset,
+    -5px -5px 10px #333 inset;
+    }
+    #output {
+    /*border:10px solid #ff0;*/
+    background-color:#ff3300;
+    width:200px;
+    height:200px;
+    border:hidden;
+    /*box-shadow:5px 5px 10px #333 inset,
+    -5px -5px 10px #333 inset;*/
+    }
+    p {
+    font-family:consolas,"courier", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.17);
+    }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <p>
+        Output:</p><div id="output"></div>
+        <p>
+        Code:</p><input type="text" id="code" value="border-radius: 0% 0% 0% 0%;" disabled>
+        <input onchange="slider1()" type="range" min="0" max="100" value="0" id="slider1">
+        <input onchange="slider2()" type="range" min="0" max="100" value="0" id="slider2">
+        <input onchange="slider3()" type="range" min="0" max="100" value="0" id="slider3">
+        <input onchange="slider4()" type="range" min="0" max="100" value="0" id="slider4">
+      </div>
+      <script>
+      function slider1() {
+      var slider1=document.getElementById('slider1').value;
+      var slider2=document.getElementById('slider2').value;
+      var slider3=document.getElementById('slider3').value;
+      var slider4=document.getElementById('slider4').value;
+      document.getElementById('output').style.borderTopLeftRadius=slider1+'%';
+      document.getElementById('code').value='border-radius: '+slider1+'% '+slider2+'% '+slider3+'% '+slider4+'%;';
+      }
+      function slider2() {
+      var slider1=document.getElementById('slider1').value;
+      var slider2=document.getElementById('slider2').value;
+      var slider3=document.getElementById('slider3').value;
+      var slider4=document.getElementById('slider4').value;
+      document.getElementById('output').style.borderTopRightRadius=slider2+'%';
+      document.getElementById('code').value='border-radius: '+slider1+'% '+slider2+'% '+slider3+'% '+slider4+'%;';
+      }
+      function slider3() {
+      var slider1=document.getElementById('slider1').value;
+      var slider2=document.getElementById('slider2').value;
+      var slider3=document.getElementById('slider3').value;
+      var slider4=document.getElementById('slider4').value;
+      document.getElementById('output').style.borderBottomLeftRadius=slider3+'%';
+      document.getElementById('code').value='border-radius: '+slider1+'% '+slider2+'% '+slider3+'% '+slider4+'%;';
+      }
+      function slider4() {
+      var slider1=document.getElementById('slider1').value;
+      var slider2=document.getElementById('slider2').value;
+      var slider3=document.getElementById('slider3').value;
+      var slider4=document.getElementById('slider4').value;
+      document.getElementById('output').style.borderBottomRightRadius=slider4+'%';
+      document.getElementById('code').value='border-radius: '+slider1+'% '+slider2+'% '+slider3+'% '+slider4+'%;';
+      }
+      </script>
+    </body>
+  </html>
